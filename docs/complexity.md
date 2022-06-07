@@ -1,4 +1,3 @@
-
 ## Computational Complexity
 
 $(\epsilon, \delta)$-DP *partition selection* is considerably more efficient and easier to implement than current state-of-the-art tree-based query methods. To support large scale applications of our *TraVaS* framework, we will briefly discuss the most important complexity considerations of all associated algorithms (see our paper).
