@@ -25,4 +25,5 @@ Any feedback is expected to arrive at `frederik.wangelik@rwth-aachen.de`
 ## Literature
 
 [1] Mannhardt, F., Koschmider, A., Baracaldo, N. et al.: "Privacy-Preserving Process Mining." Bus. Inf. Syst. Eng. 61, 595–614 (2019).
+
 [2] Fahrenkog-Petersen, Stephan A., et al. "SaCoFa: Semantics-aware Control-flow Anonymization for Process Mining." 2021 3rd International Conference on Process Mining (ICPM). IEEE, (2021).
