@@ -9,17 +9,17 @@ More detailed information can be found in the respective document.
 
 ## Structure
 The data is structured as follows. For each event log a specific folder within `implementation & experiments` contains:
-* the original XES log file
-* a `run.ipynb` jupyter notebook (to recreate all data and graphics)
-* three folders `single`, `multi` and `benchmark` (data folders)
-* the two final plots (data utility and result utility)
+* The original XES log file
+* A `run.ipynb` jupyter notebook (to recreate all data and graphics)
+* The folders `TraVaS-sqvr`, `TraVaS-optimizer`, `Benchmark`, and `SaCoFa` (for Sepsis)
+* PDF files as final evaluation plots (data utility and result utility)
 
-The folders `single`, `multi`, `benchmark`, and `sacofa` (for Sepsis) refer to the anonymization methods `TraVaS SQVR`, `TraVaS Optimizer` and a prefix-based iterative query engine [1], and SaCofa [2]. They contain two types of files:
+The folders of privacy preservation techniques contain two types of files:
 * variants_[*method*]\_[*epsilon*]\_[*delta*]_[*repetition*].json (privatized log)
 * [*measure*]_[*method*].txt (averaged evaluation data for all (&epsilon;, &delta;) combinations)
 
 ## Notes
-In particular the data utility metrics can be computationally expensive to compute. Hence we advise to ensure sufficient CPU- and memory resources.  
+In particular, the data utility metrics can be computationally expensive to compute. Hence we advise to ensure sufficient CPU- and memory resources.  
 Any feedback is expected to arrive at `frederik.wangelik@rwth-aachen.de` or `majid.rafiei@pads.rwth-aachen.de`.
 
 ## References
