@@ -55,7 +55,7 @@ get in touch at `frederik.wangelik@rwth-aachen.de`.
 ## References
 
 [1] Rafiei, M., Wangelik, F., van der Aalst, W.: "TraVaS: Differentially Private Trace Variant
-Selection for Process Mining" (in review for ICPM22)
-[2] Desfontaines, D., Voss, J., Gipson, B. et al.: Differentially private partition selection. Proc. Priv. Enhancing Technol. 2022(1): 339-352 (2022)
-[3] Mannhardt, F., Koschmider, A., Baracaldo, N. et al.: "Privacy-Preserving Process Mining." Bus. Inf. Syst. Eng. 61, 595–614 (2019).
+Selection for Process Mining" (in review for ICPM22)  
+[2] Desfontaines, D., Voss, J., Gipson, B. et al.: Differentially private partition selection. Proc. Priv. Enhancing Technol. 2022(1): 339-352 (2022)  
+[3] Mannhardt, F., Koschmider, A., Baracaldo, N. et al.: "Privacy-Preserving Process Mining." Bus. Inf. Syst. Eng. 61, 595–614 (2019).  
 [4] Holohan, N., Braghin, S., Aonghusa, P. M., et al.: Diffprivlib: The IBM Differential Privacy Library. CoRR abs/1907.02444 (2019)
