@@ -1,0 +1,9 @@
+numpy
+numba
+matplotlib
+seaborn
+Levenshtein
+pyemd
+diffprivlib
+ortools
+pm4py
