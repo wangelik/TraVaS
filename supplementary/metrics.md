@@ -53,7 +53,11 @@ Whereas the left part depicts the variants ($a,b;c,d$) and the *LevenShtein* cos
 The second issue with our relative log similarity algorithm is linked to the relative *LevenShtein* cost construction instead of the distributions. As an example we consider the corresponding distances of three variant pairs. Let $w = \langle a,a\rangle$, $x = \langle a,a,b,b,\dots,b \rangle$ (10 times activity $b$), $y = \langle a,a,b,b,\dots,b \rangle$ (20 times activity $b$) and $z = \langle a,a,b,b,\dots,b \rangle$ (30 times activity $b$) be sample variants. The relative per-activity *LevenShtein* distance between $w-x$, $w-y$ and $w-z$ then yield $10/12$, $20/22$ and $30/32$ respectively. Even though the pairs $w-x$ to $w-y$ to $w-z$ constantly increase by an activity difference of 10, the penalty of the relative *LevenShtein* grows nonlinear-degressively and thus represents an illogical transfer cost function for highly divergent variant lenghts.
 Furthermore, absolute item edit distances without normalization are easier to interpret than relative measures, in particular if they are utilized within an integer optimization routine.
 
+Since different DP methods typically have considerably different impacts on both absolute variant frequencies and trace length, these two cases can be problematic when aiming at measuring the method performance with our *relative log similarity*. To provide a remedy for both issues, we design an *absolute log difference* metric that compares variants based on their absolute sequence changes and then finds an optimal variant assignment between two event logs. A simplified example operation is presented in the following image.
 
+ <p align="center">
+<img src="images/metric_4.png" alt="Relative Log Similarity Distribution Limitation" width="650"/>
+</p>
 
 ### References
 
