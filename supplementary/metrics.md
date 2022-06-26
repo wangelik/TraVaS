@@ -6,4 +6,4 @@
 
 As a baseline for distribution-based utility metrics we refer to the *data utility* definition in \cite{priv_emd}. An algorithmic example of the workflow is depicted in the next figure. The algorithm first reads in the original- and the anonymized event log (*Log A*, *Log B*). To obtain both variant distributions, all absolute frequencies are then converted into relative numbers per log (*Distribution A, *Distribution B*). As an example *Log A* contains 100 traces distributed over 3 variants which leads to a fraction of 0.5 for $\langle a,b,c \rangle$.
 
-<img src="images/metric_1.png" alt="Relative Log Similarity Example" width="200"/>
+<img src="images/metric_1.png" alt="Relative Log Similarity Example" width="700"/>
