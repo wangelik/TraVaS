@@ -48,6 +48,12 @@ In contrast to the *relative log similarity*, we introduce our *absolute log dif
 <img src="images/metric_3.png" alt="Relative Log Similarity Distribution Limitation" width="700"/>
 </p>
 
+Whereas the left part depicts the variants ($a,b;c,d$) and the *LevenShtein* cost network between an original log *Log A* and its privatized complement *Log B*, the right part describes the same situation for another privatized event log *Log C* that only differs from *Log B* by its absolute variant numbers (200 instead of 20). As a result, both pairs would possess the exact same frequency distribution (0.5 on $a,b;c,d$) and thus the same *relative log similarity*, although *Log B* and *Log C* are distinct anonymized outcomes.
+
+The second issue with our relative log similarity algorithm is linked to the relative *LevenShtein* cost construction instead of the distributions. As an example we consider the corresponding distances of three variant pairs. Let $w = \langle a,a\rangle$, $x = \langle a,a,b,b,\dots,b \rangle$ (10 times activity $b$), $y = \langle a,a,b,b,\dots,b \rangle$ (20 times activity $b$) and $z = \langle a,a,b,b,\dots,b \rangle$ (30 times activity $b$) be sample variants. The relative per-activity *LevenShtein* distance between $w-x$, $w-y$ and $w-z$ then yield $10/12$, $20/22$ and $30/32$ respectively. Even though the pairs $w-x$ to $w-y$ to $w-z$ constantly increase by an activity difference of 10, the penalty of the relative *LevenShtein* grows nonlinear-degressively and thus represents an illogical transfer cost function for highly divergent variant lenghts.
+Furthermore, absolute item edit distances without normalization are easier to interpret than relative measures, in particular if they are utilized within an integer optimization routine.
+
+
 
 ### References
 
