@@ -40,6 +40,14 @@ Next, the cost matrix is constructed as a network of normalized *LevenShtein* di
 Eventually, the cleaned distributions $S, D$ together with the cost matrix $cost$ are provided as inputs to the *EMD* solver function. Note, that the aforementioned renormalization steps on $S, D$ are commonly part of the solver's data preprocessing pipelines and therefore omitted in the last algorithm. Our implementation is integrated into the *dpv* Python package and can be found in this repository} (see implementation main folder).
 For all our experiments, we employ this metric whenever two event logs need to be statistically compared with respect to their variant distribution.
 
+## Absolute Log Difference
+
+In contrast to the *relative log similarity*, we introduce our *absolute log difference* as a metric which measures the difference between two event logs based on absolute statistics instead of distributions. The main motivation for this additional evaluation tool originates from situations where the *EMD*-conditions of the *relative log similarity* are not well suited for measuring differences between event logs. In particular, when comparing original data to $(\epsilon,\delta)$-DP outputs, there are two important cases to differentiate. First, we consider the scenario of two DP event logs, maintaining similar variant distributions, but significant size differences. The *relative log similarity* would thus produce similar scores for both logs with respect to the original data although the DP method that produced the data most similar in size to the original log is clearly more accurate. An extreme example is shown in the following image.    
+
+ <p align="center">
+<img src="images/metric_3.png" alt="Relative Log Similarity Distribution Limitation" width="700"/>
+</p>
+
 
 ### References
 
