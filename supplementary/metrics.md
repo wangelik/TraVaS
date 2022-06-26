@@ -16,7 +16,7 @@ Although the metric allows to measure the distribution similarity in terms of se
 Due to the large cost differences, $c$ will be converted into $b$, avoiding the penalty 100 between $c$ and $a$. Consequently, both variants $b$ never produce a full link (0.5 to 0.5) which is undesired behaviour since they originate from the same sequence. Under the goal of evaluating event log similarities, it is therefore more logical to ensure matching all equal traces before computing the remaining mismatch (even if the overall solution is mathematically suboptimal).    
 
 <p align="center">
-<img src="images/metric_2.png" alt="Relative Log Similarity Example" width="700"/>
+<img src="images/metric_2.png" alt="Relative Log Similarity Limitation" width="700"/>
 </p>
 
 The second issue lies in the long runtime of standard *EMD* solvers on big inputs and thus rather represents an implementational challenge. During our experiments the *relative log similarity* computations demonstrated clear bottlenecks compared to both DP privatization engines and all other evaluation metrics.
@@ -30,3 +30,15 @@ From a technical perspective, there are multiple ways to integrate such constrai
 * Removal of all mutual relative variant frequencies (distribution overlap) with renormalization before *EMD* optimization. In our first image this denotes $\langle a,b,c \rangle : 0.25$ and $\langle a,b \rangle : 0.25$, leading to $\{\langle a,b,c \rangle : 0.25, \langle a \rangle : 0.25\}$ ($\{\langle a,b,c \rangle : 0.5, \langle a \rangle : 0.5\}$ after renormalization) in *Log A* and $\{\langle a,b,c,d \rangle : 0.25, \langle a,b \rangle : 0.25\}$ ($\{\langle a,b,c,d \rangle : 0.5, \langle a,b \rangle : 0.5\}$ after renormalization) in *Log B*.
 Compared with the last alternative, we obtain the same effects on the *relative log similarity* computation, but avoid any inefficient constraints. Moreover, the resulting metric maintains its statistical interpretation and is comparable with the traditional version from \cite{priv_emd}. Due to these advantages, we choose this option for our enhancement.
 
+ The final extended *relative log similarity* routine is presented as the following algorithm. In accordance with our schematic explanation from the initial figure, we first transform both event logs into their simple form ($L_A, L_{Ap}$), followed by the relative frequency derivation ($S, D$).
+
+ <p align="center">
+<img src="images/alg_1.png" alt="Relative Log Similarity Algorithm" width="600"/>
+</p>
+
+
+
+
+### References
+
+[1] Rafiei M., van der Aalst, W. M. P.: Towards Quantifying Privacy in Process Mining, in Process Mining Workshops - ICPM 2020 International Workshops, Springer (2020)
