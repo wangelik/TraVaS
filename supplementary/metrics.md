@@ -36,7 +36,9 @@ Compared with the last alternative, we obtain the same effects on the *relative 
 <img src="images/alg_1.png" alt="Relative Log Similarity Algorithm" width="600"/>
 </p>
 
-
+Next, the cost matrix is constructed as a network of normalized *LevenShtein* distances for all variant pairs ($cost$). At the same time, any overlapping variant frequencies (direct matches) between the two logs are removed from $S, D$ to implicitly link their frequency contribution.
+Eventually, the cleaned distributions $S, D$ together with the cost matrix $cost$ are provided as inputs to the *EMD* solver function. Note, that the aforementioned renormalization steps on $S, D$ are commonly part of the solver's data preprocessing pipelines and therefore omitted in the last algorithm. Our implementation is integrated into the *dpv* Python package and can be found in this repository} (see implementation main folder).
+For all our experiments, we employ this metric whenever two event logs need to be statistically compared with respect to their variant distribution.
 
 
 ### References
