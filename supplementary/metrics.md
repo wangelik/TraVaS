@@ -59,6 +59,19 @@ Since different DP methods typically have considerably different impacts on both
 <img src="images/metric_4.png" alt="Relative Log Similarity Distribution Limitation" width="650"/>
 </p>
 
+After the absolute variant frequencies are extracted from both logs (*Log A* and *Log B*), they are identified as supply and demand nodes of a bipartite graph (*Supply, Demand*). 
+Subsequently, the overall frequency mismatch between *Log A* and *Log B* is assigned to a buffer node (*Buffer*) and the graph edges are established as a transfer cost network based on per-activity absolute *LevenShtein* distances. We consider the examples $\langle a,b,c \rangle^{50}$ and $\langle a,b,c,d \rangle^{250}$, leading to a supply of 50, a demand of 250 and an edit distance 1 (activity $d$).
+Note that the *Buffer* represents a vertex to be assigned to all variants that are impossible to match similar neighbor variants. Hence, the cost of the incoming edges (4, 3 and 2) should always denote a separate maximum penalty with respect to the different transfer costs of the respective connected vertices (variants of *Log B*).
+Finally, the resulting assignment problem is optimally solved with a minimum cost network flow algorithm.
+As a result, the procedure measures event log differences by attempting to transform one event log into another event log while minimizing the required *LevenShtein* operations.
+The optimal solution, i.e. the minimal accumulated penalty thus declares the number of activity changes by which the two logs differ.
+
+Our complete *absolute log difference* algorithm is illustrated in the following image.
+
+ <p align="center">
+<img src="images/alg_2.png" alt="Absolute Log Difference Algorithm" width="650"/>
+</p>
+
 ### References
 
 [1] Rafiei M., van der Aalst, W. M. P.: Towards Quantifying Privacy in Process Mining, in Process Mining Workshops - ICPM 2020 International Workshops, Springer (2020)
