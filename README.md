@@ -1,8 +1,8 @@
 # TraVaS
 This repository provides the codebase and all experimental results of the "TraVaS: Differentially Private Trace Variant Selection for Process Mining" project.
 For the experiments three event logs (BPIC2012App, BPIC2013, Sepsis) were anonymized by two
-(&epsilon;, &delta;)-DP methods of TraVaS (TraVaS-sqvr and TraVaS-optimizer), a benchmark [1] and the extension of the benchmark (SaCoFa [2] - only for Sepsis as the most challenging event log). 
-The private logs have then been evaluated against two data utility measures (relative log similarity and absolute log difference) and two result utility functions (fitness and precision).
+(&epsilon;, &delta;)-DP methods of TraVaS (TraVaS-sqvr and TraVaS-optimizer), a benchmark [1], and the extension of the benchmark (SaCoFa [2] - only for Sepsis as the most challenging event log). 
+The private logs have then been evaluated against two data utility metrics (relative log similarity and absolute log difference) and two result utility metrics (fitness and precision).
 Due to the underlying probabilistic nature, each privacy parameter combination was executed 10 times in order to average result metrics.  
 More detailed information can be found in the respective document.
 
@@ -18,7 +18,7 @@ The folders of privacy preservation techniques contain two types of files:
 * [*measure*]_[*method*].txt (averaged evaluation data for all (&epsilon;, &delta;) combinations)
 
 ## Notes
-In particular, the data utility metrics can be computationally expensive to compute. Hence we advise to ensure sufficient CPU- and memory resources.  
+In particular, the data utility metrics can be computationally expensive to compute. Hence, we advise to ensure sufficient CPU- and memory resources.  
 Any feedback is expected to arrive at `frederik.wangelik@rwth-aachen.de` or `majid.rafiei@pads.rwth-aachen.de`.
 
 ## References
