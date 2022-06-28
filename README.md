@@ -1,6 +1,5 @@
 # TraVaS
-This repository provides the codebase and all experimental results of the publication
-"TraVaS: Differentially Private Trace Variant Selection for Process Mining" (Rafiei et al.).  
+This repository provides the codebase and all experimental results of the "TraVaS: Differentially Private Trace Variant Selection for Process Mining" project.
 For the experiments three event logs (BPIC2012App, BPIC2013, Sepsis) were anonymized by two
 (&epsilon;, &delta;)-DP methods of TraVaS (TraVaS-sqvr and TraVaS-optimizer), a benchmark [1] and the extension of the benchmark (SaCoFa [2] - only for Sepsis as the most challenging event log). 
 The private logs have then been evaluated against two data utility measures (relative log similarity and absolute log difference) and two result utility functions (fitness and precision).
