@@ -60,7 +60,7 @@ Since different DP methods typically have considerably different impacts on both
 </p>
 
 After the absolute variant frequencies are extracted from both logs (*Log A* and *Log B*), they are identified as supply and demand nodes of a bipartite graph (*Supply, Demand*). 
-Subsequently, the overall frequency mismatch between *Log A* and *Log B* is assigned to a buffer node (*Buffer*) and the graph edges are established as a transfer cost network based on per-activity absolute *LevenShtein* distances. We consider the examples $\langle a,b,c \rangle^{50}$  and  $\langle a,b,c,d \rangle^{250}$, leading to a supply of 50, a demand of 250 and an edit distance 1 (activity $d$).
+Subsequently, the overall frequency mismatch between *Log A* and *Log B* is assigned to a buffer node (*Buffer*) and the graph edges are established as a transfer cost network based on per-activity absolute *LevenShtein* distances. We consider the examples $\langle a,b,c \rangle^{50}$ and $\langle a,b,c,d \rangle^{250}$, leading to a supply of 50, a demand of 250 and an edit distance 1 (activity $d$).
 Note that the *Buffer* represents a vertex to be assigned to all variants that are impossible to match similar neighbor variants. Hence, the cost of the incoming edges (4, 3 and 2) should always denote a separate maximum penalty with respect to the different transfer costs of the respective connected vertices (variants of *Log B*).
 Finally, the resulting assignment problem is optimally solved with a minimum cost network flow algorithm.
 As a result, the procedure measures event log differences by attempting to transform one event log into another event log while minimizing the required *LevenShtein* operations.
