@@ -1,7 +1,7 @@
 # TraVaS
 This repository provides the codebase and all experimental results of the "TraVaS: Differentially Private Trace Variant Selection for Process Mining" project.
 For the experiments, three event logs (BPIC2012App [3], BPIC2013 [4], Sepsis [5]) were anonymized by two
-(&epsilon;, &delta;)-DP methods of TraVaS (TraVaS-sqvr and TraVaS-optimizer), a benchmark [1], and the extension of the benchmark (SaCoFa [2] - only for Sepsis as the most challenging event log). 
+(&epsilon;, &delta;)-DP methods of TraVaS (TraVaS and uTraVaS), a benchmark [1], and the extension of the benchmark (SaCoFa [2] - only for Sepsis and BPIC2013). 
 The private logs have then been evaluated against two data utility metrics (relative log similarity and absolute log difference) and two result utility metrics (fitness and precision).
 Due to the underlying probabilistic nature, each privacy parameter combination was executed 10 times, values are the averages of 10 runs.  
 More detailed information can be found in the respective document.
@@ -9,8 +9,9 @@ More detailed information can be found in the respective document.
 ## Structure
 The data is structured as follows. For each event log a specific folder within `experiments` contains:
 * The original XES log file
-* A `run.ipynb` jupyter notebook (to recreate all data and graphics)
-* The folders `TraVaS-sqvr`, `TraVaS-optimizer`, `Benchmark`, and `SaCoFa` (for Sepsis)
+* A `run.ipynb` jupyter notebook (to recreate main data and graphics)
+* A `plots.ipynb` jupyter notebook (to recreate paper and supplementary plots)
+* The folders `TraVaS`, `uTraVaS`, `Benchmark`, and `SaCoFa` (for Sepsis, BPIC2013)
 * PDF files as final evaluation plots (data utility and result utility)
 
 The folders of privacy preservation techniques contain two types of files:
